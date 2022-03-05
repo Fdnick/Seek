@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  seek
+//
+//  Created by Dan on 2021/2/25.
+//  Copyright © 2021 Dan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Tools.h"
+#import "AlertToast.h"
+#import "Toast+Category.h"
+#import "DefaultInstance.h"
+
+#import "UIViewController+ModalStyle.h"
+#import "LoginViewController.h"
+#import "NavigationView.h"
+#import "AlertView.h"
+#import "MJRefreshNormalHeader.h"
+#import "MJRefreshBackNormalFooter.h"
+#import "UITableView+NoData.h"
+
+#define KGeenColor [UIColor colorWithRed:115 / 255.0 green:190 / 255.0 blue:93 / 255.0 alpha:1.0]
+#define kOrangeColor [UIColor colorWithRed:243 / 255.0 green:122 / 255.0 blue:43 / 255.0 alpha:1.0]
+#define kLightBlackColor [UIColor colorWithRed:51 / 255.0 green:51 / 255.0 blue:51 / 255.0 alpha:1.0]
+#define kDeepGrayColor [UIColor colorWithRed:131 / 255.0 green:134 / 255.0 blue:136 / 255.0 alpha:1.0]
+#define kLightGrayColor [UIColor colorWithRed:230 / 255.0 green:230 / 255.0 blue:230 / 255.0 alpha:1.0]
+#define kPlaceholderColor [UIColor colorWithRed:200 / 255.0 green:199 / 255.0 blue:199 / 255.0 alpha:1.0]
+#define kCellGrayColor [UIColor colorWithRed:248 / 255.0 green:248 / 255.0 blue:248 / 255.0 alpha:1.0]
+#define KWhiteColor [UIColor whiteColor]
+#define KBlackColor [UIColor blackColor]
+
+#define IPHONE_X \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
+#define kWidth [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
+#define kStatusBarHeight [Tools getStatusBarHight]
+#define kNavigationHeight kStatusBarHeight + 44
+#define kTabBarHeight (CGFloat)(IPHONE_X?(49.0 + 34.0):(49.0))
+#define kBottomSafeHeight (IPHONE_X?(34):(0))
+
+#endif /* PrefixHeader_pch */
